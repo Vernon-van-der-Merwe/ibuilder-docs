@@ -1,0 +1,57 @@
+## Set up the initial project
+
+## Front-End
+
+### Setup
+
+1. Create Next.js app
+2. Add Firebase Hosting
+3. Add Firebase Functions
+4. Add Mantine (UI Component Library)
+5. Deploy to ensure all is gooooood!
+
+### Authentication
+
+1. Implement Firebase Auth
+2. Create authentication feature
+   - login page
+   - Data verification
+   - Feedback
+     - Notifications
+     - Loading icons
+   - Add routes/redirects
+   - login/logout logic
+   - Add dashboard landing page
+
+### Start building the payment calculator
+
+1. Create the calculator page
+2. Add Date Input for the start date & end date [GitHub](https://github.com/Vernon-van-der-Merwe/ibuilder-web/blob/main/pages/dashboard/index.tsx#L131)
+3. Calculation logic - [GitHub](https://github.com/Vernon-van-der-Merwe/ibuilder-web/blob/main/pages/dashboard/index.tsx#L17)
+   - getMonthList - get the number of months selected for the extract
+   - isWeekend - check if the date is a weekend
+   - getNextWednesday - get the next wednesday
+   - getPreviousFriday - get the previous friday
+   - AddOneYear - add one year to the date, this is for the second date Input
+   - asSalaryData - convert the data to the correct format for the salary data table on the frontend
+   - asCsvData - convert the data to the correct format for the csv file
+   - calculateBonusDate [GitHub](https://github.com/Vernon-van-der-Merwe/ibuilder-web/blob/main/pages/dashboard/index.tsx#L79)
+     - get the 15th day of the month
+     - if the 15th day is a weekend, get the next wednesday
+     - else return the 15th day
+   - calculateSalaryDate [GitHub](https://github.com/Vernon-van-der-Merwe/ibuilder-web/blob/main/pages/dashboard/index.tsx#L91)
+     - get the end of the month
+     - if the end of the month is a weekend, get the previous friday
+     - else return the end of the month
+   - calculateSalary [GitHub](https://github.com/Vernon-van-der-Merwe/ibuilder-web/blob/main/pages/dashboard/index.tsx#L98)
+     - Calculates bonus and salary
+   - calculateSalaries [GitHub](https://github.com/Vernon-van-der-Merwe/ibuilder-web/blob/main/pages/dashboard/index.tsx#L98)
+     - loops through calculateSalary
+4. Download CSV file
+   - [GitHub](https://github.com/Vernon-van-der-Merwe/ibuilder-web/blob/main/pages/dashboard/index.tsx#L159)
+
+
+### What I still want to do
+1. Add calculation logic to firebase Functions
+    - Save data in firestore per user to generate history
+    - Show history per user and allow download

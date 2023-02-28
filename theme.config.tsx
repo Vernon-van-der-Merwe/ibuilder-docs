@@ -4,7 +4,7 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 const config: DocsThemeConfig = {
   logo: <span>iBuilder Docs</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/Vernon-van-der-Merwe/ibuilder-docs',
   },
   docsRepositoryBase: 'https://github.com/Vernon-van-der-Merwe/ibuilder-docs',
   footer: {
